@@ -23,6 +23,7 @@ type WeatherForecast struct {
 		Condition struct {
 			Text string `json:"text"`
 		} `json:"condition"`
+		WindKPH float32 `json:"wind_kph"`
 	} `json:"current"`
 	Forecast struct {
 		ForecastDay []struct {
@@ -32,6 +33,7 @@ type WeatherForecast struct {
 				Condition struct {
 					Text string `json:"text"`
 				} `json:"condition"`
+				WindKPH      float32 `json:"wind_kph"`
 				ChanceOfRain float32 `json:"chance_of_rain"`
 				FeelsLikeC   float32 `json:"feelslike_c"`
 			} `json:"hour"`
@@ -76,7 +78,7 @@ func main() {
 	}
 
 	location, current, hours := forecast.Location, forecast.Current, forecast.Forecast.ForecastDay[0].Hour
-	fmt.Printf("Current weather: %s, %s: %.1fC, %s \n \n", location.Name, location.Country, current.TempC, current.Condition.Text)
+	fmt.Printf("Current weather: %s, %s: %.1fC, %.1f, %s \n \n", location.Name, location.Country, current.TempC, current.WindKPH, current.Condition.Text)
 
 	// Get the current time
 	now := time.Now()
@@ -90,10 +92,11 @@ func main() {
 		}
 
 		msg := fmt.Sprintf(
-			"* %s ⇨ %.1f°C | %.1f%% | %s\n",
+			"• %s ⇨ 🌡️%.1f°C | 🌧️ %.1f%% | %.1f Km/h | %s\n",
 			date.Format("15:04"),
 			hour.TempC,
 			hour.ChanceOfRain,
+            hour.WindKPH,
 			hour.Condition.Text,
 		)
 
