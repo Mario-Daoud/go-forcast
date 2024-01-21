@@ -7,7 +7,7 @@ Command line tool for getting daily weather forecasts.
 - Have API key for `api.weatherapi.com` in `.env` file assigned to `WEATHER_API_KEY`
 
 ### Run program
-- Possible flags
+- Flags
     - -city -> (string, required) name of the city
     - -24h -> (true/false, optional) (default false) see forecast for the coming 24 hours or till the end of the day
 
