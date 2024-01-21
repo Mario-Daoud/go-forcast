@@ -1,4 +1,4 @@
-# Weather 
+# go-forecast
 Command line tool for getting daily weather forecasts.
 
 ## How to use?
@@ -13,8 +13,8 @@ Command line tool for getting daily weather forecasts.
 
 - example usage
 ```bash
-$ go build cmd/main.go
-$ ./weather -city=los-angeles -forecast24h=false
+$ cd go-forecast
+$ ./main -city=los-angeles -forecast24h=false
 ```
 
 - example output
