@@ -8,8 +8,8 @@ Command line tool for getting daily weather forecasts.
 
 ### Run program
 - Possible flags
-    - -city -> (string) name of the city
-    - -24h -> (true/false) see forecast for the coming 24 hours or till the end of the day
+    - -city -> (string, required) name of the city
+    - -24h -> (true/false, optional) (default false) see forecast for the coming 24 hours or till the end of the day
 
 - example usage
 ```bash
@@ -19,7 +19,7 @@ $ ./main -city=los-angeles -24h=false
 
 - example output
 ```
-Current weather: Los Angeles, United States of America: 17.8C, 6.1 Kph, Overcast
+Current weather: Los Angeles, United States of America: 17.8°C, 6.1 Kph, Overcast
 
 • 01:00 ⇨ 🌡️15.6°C | 🌧️ 77.0% | 💨 7.6 Kph | Patchy rain possible
 • 02:00 ⇨ 🌡️15.4°C | 🌧️ 80.0% | 💨 6.1 Kph | Patchy rain possible
