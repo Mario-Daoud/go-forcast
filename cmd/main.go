@@ -97,7 +97,7 @@ func main() {
 			hour.Condition.Text,
 		)
 
-		if hour.TempC <= 10 {
+		if hour.TempC <= -10 {
 			color.Cyan(msg)
 		} else if hour.TempC <= 0 {
 			color.Blue(msg)
