@@ -1,23 +1,23 @@
 # go-forecast
-Command line tool for getting daily weather forecasts.
+Go-forecast is a command line tool for getting daily weather forecasts.
 
 ## How to use?
 ### Prequisites
-- Have GO installed
-- Have API key for `api.weatherapi.com` in `.env` file assigned to `WEATHER_API_KEY`
+- Have GO installed.
+- Have API key for `api.weatherapi.com` in `.env` file assigned to `WEATHER_API_KEY`.
 
 ### Run program
 - Flags
-    - -city -> (string, required) name of the city
-    - -24h -> (true/false, optional) (default false) see forecast for the coming 24 hours or till the end of the day
+    - -city -> (string, required) - Name of the city.
+    - -24h -> (true/false, optional) (default false) - Forecast for the coming 24 hours or until the end of the day.
 
-- example usage
+- Example usage
 ```bash
 $ cd go-forecast
 $ ./main -city=los-angeles -24h=false
 ```
 
-- example output
+- Example output
 ```
 Current weather: Los Angeles, United States of America: 17.8°C, 6.1 Kph, Overcast
 
