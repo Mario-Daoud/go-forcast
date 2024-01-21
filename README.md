@@ -2,14 +2,13 @@
 Command line tool for getting daily weather forecasts.
 
 ## How to use?
-
-##### Prequisites
+### Prequisites
 - Have GO installed
 
-##### Run program
+### Run program
 - Possible flags
-    - city -> (string) name of the city
-    - forecast24h -> (true/false) see forecast for the coming 24 hours or till the end of the day
+    - -city -> (string) name of the city
+    - -forecast24h -> (true/false) see forecast for the coming 24 hours or till the end of the day
 
 - example usage
 ```bash
