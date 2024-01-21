@@ -48,7 +48,7 @@ func main() {
 	var forecast24h bool
 
 	flag.StringVar(&city, "city", "Kortrijk", "City name")
-	flag.BoolVar(&forecast24h, "forecast24h", false, "Set to true for a 24-hour forecast")
+	flag.BoolVar(&forecast24h, "24h", false, "Set to true for a 24-hour forecast")
 
 	flag.Parse()
 
@@ -78,7 +78,7 @@ func main() {
 	}
 
 	location, current, hours := forecast.Location, forecast.Current, forecast.Forecast.ForecastDay[0].Hour
-	fmt.Printf("Current weather: %s, %s: %.1fC, %.1f, %s \n \n", location.Name, location.Country, current.TempC, current.WindKPH, current.Condition.Text)
+	fmt.Printf("Current weather: %s, %s: %.1fC, %.1f Kph, %s \n \n", location.Name, location.Country, current.TempC, current.WindKPH, current.Condition.Text)
 
 	// Get the current time
 	now := time.Now()
@@ -92,7 +92,7 @@ func main() {
 		}
 
 		msg := fmt.Sprintf(
-			"• %s ⇨ 🌡️%.1f°C | 🌧️ %.1f%% | %.1f Km/h | %s\n",
+			"• %s ⇨ 🌡️%.1f°C | 🌧️ %.1f%% | 💨 %.1f Kph | %s\n",
 			date.Format("15:04"),
 			hour.TempC,
 			hour.ChanceOfRain,
